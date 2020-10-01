@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> -->
+    <title>VUEjs | Computed Properties</title>
+</head>
+<body>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h2>VUEjs - Filtros</h2>    
+                    <button v-on:click="getUsers" class="btn btn-primary" v-if="!lists.length">Listar</button>
+                    <ul class="list-group" v-else>
+                        <li class="list-group-item">
+                            <input type="text" class="form-control" placeholder="Search" v-model="name">
+                        </li>
+                        <li v-for="item in searchUser" class="list-group-item">{{ item.name }}</li>
+                    </ul>
+                </div>
+
+                <div class="col-8">
+                <h1>JSON</h1>
+                <pre class="border">
+                    {{$data | json}}
+                </pre>   
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#main',
+            data: {
+                lists: [],
+                name: '',
+            },
+            methods: {
+                getUsers: function(){
+                    var urlUsers='https://jsonplaceholder.typicode.com/users';
+                    axios.get(urlUsers).then(response => {
+                        this.lists = response.data;
+                    });
+                }
+            },
+            computed: {
+                searchUser: function(){
+                    return this.lists.filter((item) => item.name.includes(this.name));
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>

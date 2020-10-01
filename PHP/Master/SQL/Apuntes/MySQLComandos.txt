@@ -1,0 +1,50 @@
+Algunos comandos basicos para MySQL son:
+
+mysql> status
+    El cual sirve para mostrar datos como la version del servidor, 
+    protocolo que usa. Si tienes activo una conexion SSL. Entre otros.
+
+mysql>show database
+    Muestra las bases de datos que estan ya en el sistema
+
+mysql> create database database_name;
+    Este comando crea una base de datos con el nombre que deseas poner
+
+mysql>use database_name;
+    Usas la bd que acabas de crear para trabajar con ella.
+
+mysql>show tables;
+    Si ya ejecutaste el comando anterior, lo que hace es que muestra las tablas 
+    que tienes en esa base de datos.
+
+mysql>drop database database_name;
+    De esta manera eliminas la base de datos que acabas de crear.
+
+mysql>describe table_name;
+    Con este comando puedes ver las columnas que tiene la tabla.
+
+cmd>mysql_upgrade -u root -p
+Si agregas algun usuario en tu servidor de base de datos 
+(si es que llegas a sufrir un error).
+
+mysql> insert into table_name(column_1, column_2, column_3) 
+        values ("column_1", "column_2", "column_3");
+    Para insertar datos en una tabla de tu base de datos.
+
+mysql> drop table table_name
+    Usara para eliminar la tabla que deseas.
+    
+mysql> alter table table_name rename to new_table_name
+    Usado para renombrar una tabla de la BD.
+
+mysql> alter table table_name change old_column_name new_column_name 
+    De esta manera cambias el nombre de un campo en al bd.
+
+mysql> alter table table_name MODIFY column_name ... ...
+    modifica los valores de una columna.
+
+mysql> alter table users_rename modify add column_name
+    agrega una nueva columna a tu tabla.
+
+mysql> alter table table_name add constraint constraint(column_name)
+    le agregas un constraint a una columna

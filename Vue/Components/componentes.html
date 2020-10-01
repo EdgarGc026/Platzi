@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> -->
+    <title>VUEjs | Componentes</title>
+</head>
+<body>
+
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h1>VUEjs - Album</h1>    
+                    <common-list v-bind:lists="albums"></common-list>  
+                </div>
+                <div class="col-4">
+                    <h1>Posts</h1>
+                    <common-list v-bind:lists="posts"></common-list>   
+                </div>
+                <div class="col-4">
+                    <h1>Fotos</h1>
+                    <common-list v-bind:lists="photos"></common-list>   
+                </div>
+                <div class="col-12">
+                    <h1>JSON</h1>
+                    <pre class="border">
+                        {{ $data }}
+                    </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script type="text/javascript">
+        Vue.component('common-list',{
+            // Propiedades y plantila
+            props : ['lists'],
+            template :'<ul class="list-group"><li class="list-group-item" v-for="item in lists">{{ item.title }}</li></ul>',
+        });
+
+        var urlPosts = 'https://jsonplaceholder.typicode.com/posts';
+        var urlAlbums = 'https://jsonplaceholder.typicode.com/albums';
+
+        new Vue({
+            el: '#main',
+            created: function(){
+                this.getPosts(),
+                this.getAlbums()
+            },
+            data: {
+                posts: [],
+                albums: [],
+                photos: [
+                    {title: 'foto 1'},
+                    {title: 'foto 2'}
+                ],
+            },
+            methods: {
+                getPosts: function(){
+                    axios.get(urlPosts).then(response => {
+                        this.posts = response.data;
+                    });
+                },
+                getAlbums: function(){
+                    axios.get(urlAlbums).then(response => {
+                        this.albums = response.data;
+                    });
+                }
+            }   
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackOverflow</title>
+</head>
+<body>
+    <form action="" id="formulario" method="post" class="form-register"> 
+        <h2 style="font-family: 'Pacifico', cursive;" class="form__titulo">Crear cuenta</h2>
+        <div class="contenedor-inputs">
+            <input type="text"id="Nombre" name="nombre" placeholder="Nombre" class="input-48" onsubmit="return validar()">
+            <input type="text"id="Apellidos" name="apellidos" placeholder="Apellidos" class="input-48" >
+            <input type="email"id="Correo" name="correo" placeholder="Correo" class="input-100" >
+            <input type="text"id="Usuario" name="usuario" placeholder="Usuario" class="input-48" >
+            <input type="password"id="Clave" name="clave" placeholder="Contraseña" class="input-48" >
+            <input type="text"id="Telefono" name="telefono" placeholder="Telefono" class="input-100">
+            <input type="submit" value="Enviar" class="btn-enviar">
+           
+            <p class="form_link">¿Ya tienes una cuenta?<a href="#">Ingresa aquí</a></p>
+        </div>
+    </form>
+    <script src="main.js"></script> 
+</body>
+</html>

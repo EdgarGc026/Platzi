@@ -1,0 +1,38 @@
+body{
+    background-color: #cccccc;
+    color: white;
+/*     
+    background-image: url('img/paisaje1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-position: left bottom; */
+}
+
+#box{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: rgb(99, 73, 248);
+    color: white;
+    font-family: "Open-sans";
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+    vertical-align: top;
+}
+
+h2{
+    color: red;
+    background: white;
+    border: 5px solid red;
+    background-image: url('img/patron2.jpg');
+}
+
+p{
+    color: white;
+    text-align: justify;
+    text-indent: 10px;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+}

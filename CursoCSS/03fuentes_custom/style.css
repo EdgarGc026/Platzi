@@ -1,0 +1,34 @@
+@font-face{
+    font-family: 'RecursiveCustom';
+    src: url(css/static/Recursive-Black-CASL=1-CRSV=1-MONO=1-slnt=0.ttf);
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 45px;
+
+    /* Agregando colores */
+    /* colores del sistema */
+    color: mediumpurple;
+    color: #cccccc;
+    color: #9b4242;
+    color: rgb(255,225, 107);
+    color: rgba(255,19, 38, 1);
+    /* Colores Hexadecimal */
+    /* Colores RGB */
+    /* Colores RGBA */
+}
+
+h2{
+    font-family: 'RecursiveCustom', Times, serif;
+    font-weight: lighter;
+    font-size: 16px;
+    color: olive;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}

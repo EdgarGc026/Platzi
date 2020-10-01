@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script type="text/javascript" src="script.js"></script>
+      <link rel="stylesheet" href="style.css" />
+      <title>Index de las practicas</title>
+   </head>
+   <!-- 
+    1- Formulario: input name, last, age
+    2- button send: submit event.
+    3- Show datas
+    4- validate form.
+-->
+
+   <body>
+      <h1 class="text-center">Ejercicio del DOM y BOM | JS</h1>
+      <div class="box" id="formContainer">
+         <form action="#" id="loginForm" method="GET" onsubmit="return false;">
+            <label for="name">Nombre</label><br />
+            <input
+               type="text"
+               name="name"
+               id="name"
+               placeholder="Nombre"
+            /><br />
+            <span id="errorName"></span>
+
+            <label for="lastName">Apellidos</label><br />
+            <input
+               type="text"
+               name="lastName"
+               id="lastName"
+               placeholder="Apellidos"
+            /><br />
+            <span id="errorLastName"></span>
+
+            <label for="age">Edad</label><br />
+            <input type="number" name="age" id="age" placeholder="Edad" /><br />
+            <span id="errorAge"></span>
+
+            <input type="submit" id="btnSubmit" value="Enviar" />
+         </form>
+      </div>
+
+      <div class="box dashed">
+         <h3>Informacion del usuario</h3>
+         <hr />
+
+         <p id="pName">Nombre: <span></span></p>
+
+         <p id="pLastName">Apellido: <span></span></p>
+
+         <p id="pAge">Edad: <span></span></p>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,19 @@
+{
+    "name": "edgargc026/iniciar-proyecto",
+    "description": "Ejemplo composer",
+    "type": "library",
+    "require": {
+        "nesbot/carbon": "^2.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.4@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "EdgarGc026",
+            "email": "EdgarGc_26@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

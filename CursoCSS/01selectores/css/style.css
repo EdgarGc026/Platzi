@@ -1,0 +1,86 @@
+body{
+    background: #FFFFFF;
+}
+/* Selector de tipo etiquetas */
+h1{
+    background: red;
+    color: white;
+    padding: 10px;
+}
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+/* Selector de tipo ID */
+#description{
+    border: 5px solid black;
+    padding: 12px;
+}
+
+#title{
+    background: blue;
+    border: 2px dashed white;
+}
+
+/* Selector de clases */
+.paragraph{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.paragraph1, .paragraph3{
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+.paragraph3{
+    background-color: orange;
+    color: black;
+}
+
+/* Selectores de atributos */
+#user form{
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#user form *{
+    display: block;
+}
+
+input[type="text"]{
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+input[type="submit"]{
+    background: green;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/* Selectores hijos */
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+/* Manejando la prioridad */
+#saludo h1{
+    background: brown;
+}
+
+h1{
+    background: purple;
+}

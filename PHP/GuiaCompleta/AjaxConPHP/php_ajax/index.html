@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP || Ajax</title>
+</head>
+<body>
+    
+    <button onclick="sendRequest()">
+        Send AJAX request
+    </button>
+
+    <h1 id="title"></h1>
+
+    <script>
+        'use strict'
+        function sendRequest() {
+            var php = new XMLHttpRequest();
+            php.open('POST', 'backend.php', true);
+            php.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            
+            php.onreadystatechange = function () {
+                document.getElementById('title').innerHTML = php.responseText;
+            }
+
+            php.send('username=Edgar');
+        }   
+    </script>
+
+</body>
+</html>

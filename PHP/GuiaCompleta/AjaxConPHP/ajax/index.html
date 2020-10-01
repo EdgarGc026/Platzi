@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta age="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Table || AJAX</title>
+</head>
+
+<body>
+<div class="container">
+    
+    <header>
+        <h1>Tabla de usarios</h1>
+        <div>
+            <button id="btn_load_user" class="btn active">Cargar Usuarios</button>
+        </div>
+    </header>
+
+    <main>
+        <form action="" method="" id="forms" class="forms">
+            <input type="text" name="name" id="name" placeholder="Nombre">
+            <input type="text" name="age" id="age" placeholder="Edad">
+            <input type="text" name="country" id="country" placeholder="Pais">
+            <input type="email" name="email" id="email" placeholder="Correo">
+            <button type="submit" class="btn">Agregar</button>
+        </form>
+        <div class="error_box" id="error_box">
+            <p>¡Ups, algo paso y no sabemos que fue :(!</p>
+        </div>
+
+        <table id="table" class="table">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Pais</th>
+                <th>Correo</th>
+            </tr>
+        </table>
+        <div class="loader" id="loader"></div>
+    </main>
+</div>
+<script src="js/ajax.js"></script>
+
+</body>
+</html>

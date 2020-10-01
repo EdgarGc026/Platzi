@@ -1,0 +1,40 @@
+body{
+    background-color: gray;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    height: 40px;
+    background-color: #333;
+}
+
+nav ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    color: #fff;
+    line-height: 40px;
+    padding: 0px 20px;
+    display: block;
+}
+
+nav ul li a:hover{
+    background-color: #999;
+    color: #333;
+}
+.active{
+    background-color: #999;
+    color: #333;
+}

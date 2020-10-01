@@ -1,0 +1,9 @@
+{
+  "name": "edgargc026",
+  "description": "Programacion web",
+  "courses": {
+    "advanced": ["PHP", "VueJS"],
+    "basic": ["JSON", "HTML"]
+  },
+  "example": false
+}
